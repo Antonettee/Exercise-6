@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Simple Conversion Calculator</title>
+		
+	</head> 
+    <body>
+        <h2> Kilogram - Gram:</h2>
+        
+        Kilograms: <input oninput="calcG()" onchange="calcG()" type="number" id="kilograms"/>
+        Grams: <input oninput="calcK()" onchange="calcK()" type="number" id="grams"/>
+
+        <script>
+            function calcG() {
+                let x = document.getElementById("kilograms").value;
+                let y = document.getElementById("grams").value;
+
+                document.getElementById("grams").value = x * 1000;
+            } 
+
+            function calcK() {
+                let x = document.getElementById("kilograms").value;
+                let y = document.getElementById("grams").value;
+
+                document.getElementById("kilograms").value = y / 1000;
+            }
+        </script>
+
+        <h2> Kilogram - Milligram:</h2>
+        
+        Kilograms: <input oninput="calcMg()" onchange="calcMg()" type="number" id="kilograms2"/>
+        Milligrams: <input oninput="calcK()" onchange="calcK()" type="number" id="milligrams"/>
+
+        <script>
+            function calcMg() {
+               let x = document.getElementById("kilograms2").value;
+               let y = document.getElementById("milligrams").value;
+
+                document.getElementById("milligrams").value = x * 1000000;
+            } 
+
+            function calcK() {
+                let x = document.getElementById("kilograms2").value;
+                let y = document.getElementById("milligrams").value;
+
+                document.getElementById("kilograms2").value = y / 1000000;
+            }
+        </script>
+
+</body>
+    </html>
